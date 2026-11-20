@@ -3,6 +3,10 @@
  * Portfolio_TuTrongHuy_MarketingExecutive.pdf (11 trang).
  * Không thêm thông tin ngoài hồ sơ gốc.
  */
+
+/** Trả về đường dẫn asset có prefix base URL đúng cho cả local lẫn GitHub Pages */
+const asset = (path: string) => `${import.meta.env.BASE_URL}${path.replace(/^\//, '')}`;
+
 import type {
   AchievementFigure,
   ContactInfo,
@@ -20,8 +24,8 @@ export const contact: ContactInfo = {
   email: 'tutronghuy.work@gmail.com',
   phone: '+84 70 739 8857',
   phoneHref: '+84707398857',
-  resumeFile: '/assets/Portfolio_TuTrongHuy_MarketingExecutive.pdf',
-  portrait: '/assets/portrait.jpg',
+  resumeFile: asset('/assets/Portfolio_TuTrongHuy_MarketingExecutive.pdf'),
+  portrait: asset('/assets/portrait.jpg'),
 };
 
 export const navItems: NavItem[] = [
@@ -61,8 +65,8 @@ export const education: Education = {
   gpa: '3.4/4.0',
   body: 'Tôi là sinh viên năm 4 tại Trường Đại học Nông Lâm TP. Hồ Chí Minh với GPA 3.4/4.0. Trong quá trình học, tôi luôn duy trì thành tích tốt, tích cực tham gia các hoạt động và dự án để rèn luyện kỹ năng thực tiễn. Mục tiêu của tôi là trở thành một Marketing Specialist, có thể đóng góp vào hoạt động xây dựng thương hiệu và triển khai các chiến dịch mang lại giá trị thực tế cho doanh nghiệp.',
   photos: [
-    { src: '/assets/nong-lam-1.jpg', alt: 'Toà nhà Trường Đại học Nông Lâm TP. Hồ Chí Minh' },
-    { src: '/assets/nong-lam-2.jpg', alt: 'Giảng đường Phượng Vỹ, Trường Đại học Nông Lâm TP. Hồ Chí Minh' },
+    { src: asset('/assets/nong-lam-1.jpg'), alt: 'Toà nhà Trường Đại học Nông Lâm TP. Hồ Chí Minh' },
+    { src: asset('/assets/nong-lam-2.jpg'), alt: 'Giảng đường Phượng Vỹ, Trường Đại học Nông Lâm TP. Hồ Chí Minh' },
   ],
 };
 
@@ -136,12 +140,12 @@ export const experiences: ExperienceItem[] = [
     ],
     media: [
       {
-        src: '/assets/tiktok-doubleh.jpg',
+        src: asset('/assets/tiktok-doubleh.jpg'),
       device: 'phone',
         alt: 'Trang hồ sơ TikTok DoubleH rì viu (@doubleh.r.viu): 789 follower, 28,4K lượt thích, video cao nhất 612K view',
       },
       {
-        src: '/assets/tiktok-chipp.jpg',
+        src: asset('/assets/tiktok-chipp.jpg'),
       device: 'phone',
         alt: 'Trang hồ sơ TikTok Chipp rìviu (@chipp.rviu5): 1.259 follower, 3.195 lượt thích',
       },
@@ -168,12 +172,12 @@ export const achievement = {
   ],
   media: <MediaShot[]>[
     {
-      src: '/assets/affiliate-dashboard.jpg',
+      src: asset('/assets/affiliate-dashboard.jpg'),
       device: 'laptop',
       alt: 'Bảng dữ liệu liên kết: @doubleh.r.viu đạt doanh thu 85,99 triệu đồng, 8,34 triệu đồng hoa hồng, 486 mặt hàng',
     },
     {
-      src: '/assets/tiktok-shop.jpg',
+      src: asset('/assets/tiktok-shop.jpg'),
       device: 'phone',
       alt: 'Màn hình TikTok Shop của tài khoản doubleh.r.viu với dữ liệu bán hàng trong ngày',
     },
