@@ -1,0 +1,55 @@
+/* Design tokens — marketing, biên tập (editorial).
+   Bảng màu lấy từ bộ nhận diện của portfolio gốc:
+   xanh cobalt in trên nền giấy ngà, điểm màu loang hồng/san hô. */
+:root {
+  /* Nền & mực */
+  --paper: #f5f3ef;
+  --paper-2: #ece9e2;
+  --paper-3: #ffffff;
+  --ink: #16233f;
+  --ink-soft: #4d5873;
+  --ink-dim: #586079;
+
+  /* Nhấn */
+  --blue: #2b55a8;
+  --blue-deep: #1a3771;
+  --blush: #f3c3d2;
+  --coral: #ef9d87;
+  /* san hô chỉ dùng cho mảng trang trí; bản đậm dưới đây mới dùng cho chữ */
+  --rose-ink: #a8324a;
+
+  /* Kẻ */
+  --rule: #d6d2c9;
+  --rule-strong: #b3aea3;
+
+  /* Chữ */
+  --f-display: 'Archivo', 'Be Vietnam Pro', system-ui, sans-serif;
+  --f-body: 'Be Vietnam Pro', system-ui, -apple-system, sans-serif;
+
+  /* Thang chữ */
+  --t-mega: clamp(2.5rem, 9vw, 7.4rem);
+  --t-xxl: clamp(2rem, 5vw, 3.9rem);
+  --t-lg: clamp(1.25rem, 2.1vw, 1.7rem);
+  --t-md: clamp(1rem, 1.2vw, 1.12rem);
+  --t-sm: 0.94rem;
+  --t-xs: 0.81rem;
+
+  /* Nhịp */
+  --gutter: clamp(1.25rem, 5vw, 4.5rem);
+  --maxw: 1200px;
+  --section-y: clamp(4.5rem, 9vw, 8rem);
+  --bar: 3px;
+
+  --ease: cubic-bezier(0.22, 0.75, 0.3, 1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}

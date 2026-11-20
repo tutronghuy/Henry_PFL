@@ -1,0 +1,31 @@
+.watercolor {
+  position: absolute;
+  pointer-events: none;
+  z-index: 0;
+  filter: blur(28px) saturate(1.05);
+  mix-blend-mode: multiply;
+}
+
+.watercolor path {
+  opacity: 0.6;
+}
+
+.watercolor__blot {
+  opacity: 0.4;
+}
+
+.watercolor--blush path {
+  fill: var(--blush);
+}
+
+.watercolor--blush .watercolor__blot {
+  fill: var(--coral);
+}
+
+.watercolor--coral path {
+  fill: var(--coral);
+}
+
+.watercolor--coral .watercolor__blot {
+  fill: var(--blush);
+}

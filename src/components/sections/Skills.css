@@ -1,0 +1,83 @@
+.skills {
+  padding-block: var(--section-y);
+}
+
+/* mục lục kiểu ấn phẩm: nhóm bên trái, mục bên phải, nối bằng đường chấm */
+.skills__group {
+  display: grid;
+  grid-template-columns: minmax(0, 0.38fr) minmax(0, 1fr);
+  gap: clamp(1rem, 4vw, 3rem);
+  padding-block: clamp(1.4rem, 3vw, 2rem);
+  border-top: 2px solid var(--ink);
+}
+
+.skills__group:last-child {
+  border-bottom: 2px solid var(--ink);
+}
+
+.skills__group-title {
+  font-family: var(--f-body);
+  font-size: var(--t-lg);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  color: var(--blue);
+}
+
+.skills__row {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+  padding-block: 0.5rem;
+}
+
+.skills__row + .skills__row {
+  border-top: 1px dotted var(--rule-strong);
+}
+
+.skills__name {
+  flex: 0 1 auto;
+  min-width: 0;
+  font-size: var(--t-md);
+  font-weight: 600;
+}
+
+.skills__leader {
+  flex: 1 1 auto;
+  min-width: 1.5rem;
+  height: 0;
+  border-bottom: 1px dotted var(--rule-strong);
+  transform: translateY(-0.25em);
+}
+
+.skills__detail {
+  flex: 0 1 auto;
+  min-width: 0;
+  max-width: 55%;
+  text-align: right;
+  font-size: var(--t-sm);
+  color: var(--ink-soft);
+}
+
+@media (max-width: 860px) {
+  .skills__group {
+    grid-template-columns: 1fr;
+    gap: 0.9rem;
+  }
+
+  .skills__row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.15rem;
+  }
+
+  .skills__leader {
+    display: none;
+  }
+
+  .skills__name,
+  .skills__detail {
+    max-width: 100%;
+    text-align: left;
+  }
+}

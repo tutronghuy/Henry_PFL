@@ -1,0 +1,39 @@
+.colophon {
+  border-top: var(--bar) solid var(--ink);
+  background: var(--paper-2);
+  color: var(--ink-soft);
+  padding-block: 1.4rem;
+}
+
+.colophon__inner {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem 2rem;
+  align-items: baseline;
+  justify-content: space-between;
+  font-size: var(--t-xs);
+}
+
+.colophon p {
+  margin: 0;
+}
+
+.colophon__name {
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.colophon__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+}
+
+.colophon a {
+  text-decoration: none;
+}
+
+.colophon a:hover {
+  color: var(--blue);
+  text-decoration: underline;
+}
